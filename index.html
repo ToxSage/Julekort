@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Julekort</title>
+        <link rel="icon" href="misc/Juletre Icon.png" type="image/icon type">
+        <link rel="stylesheet" type="text/css" href="jul.css">
+        <script src="jul.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>
+            <video class="background" oncontextmenu="return false;" autoplay disablePictureInPicture loop muted>
+                <source src="misc/Christmas Fire Place.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <p id="jul"></p>
+            <input id="input" type="text" value="Skriv navnet ditt" onblur="navn()">
+            <p id="blink"></p>
+        </div>
+        <div class=tore-container>
+            <img id="box" src="misc/Gift Box.png" onclick="openGift()" onmouseover="" style="cursor: pointer;">
+            <img id="tore-img" src="misc/tore nisse.png">
+            <img id="stjerne" src="misc/dansk-smorbrod-med-flyndre-og-reker.jpg" onclick="cheezburger()">
+        </div>
+        <audio id="music" type="audio/mp3" loop>
+            <source src="misc/epic christmas music.mp3">
+        </audio>
+        <audio id="cheezburger" type="audio/mp3">
+            <source src="misc/mmm-cheezburger.mp3">
+        </audio>
+    </body>
+</html>

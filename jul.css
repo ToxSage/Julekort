@@ -1,0 +1,182 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font: normal bold 3.5rem /1.2 'Poppins', 'Helvetica', sans-serif;
+    text-align: center;
+}
+
+#input {
+    position: relative;
+    z-index: 5;
+    border-radius: 8px;
+}
+
+#gone {
+    position: relative;
+    opacity: 0;
+}
+
+#jul{
+    position: relative;
+    text-transform: uppercase;   
+    background-image: linear-gradient(to right, green, white, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    z-index: 2;
+
+    background-size: 300%;
+    background-position: 200%;
+    animation: candycane 3s linear infinite;
+}
+
+#blink {
+    position: relative;
+    text-transform: uppercase;   
+    background-image: linear-gradient(to right, red, white, green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    z-index: 3;
+
+    background-size: 300%;
+    background-position: 200%;
+    animation: candycane 3s linear infinite;
+    animation-delay: 2s;
+} 
+
+.tore-container {
+    position: absolute;
+    top: 0;
+}
+
+.tore-img {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    width: 50%;
+    top: 10%;
+    left: 25%;
+    right: 75%;
+}
+
+#tore-ani {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    width: 50%;
+    top: 10%;
+    left: 25%;
+    right: 75%;
+    animation: tore 2s linear;
+}
+
+#tore-img {
+    position: fixed;
+    opacity: 0;
+}
+
+#box {
+    position: relative;
+    top: 0px;
+    transform:scale(40%);
+    width: 50%;
+}
+
+#openedBox {
+    opacity: 0;
+    height: 1%;
+}
+
+#smørbrød {
+    position:absolute;
+    z-index: 3;
+    left: 45%;
+    right: 55%;
+    top: 30%;
+    width: 10%;
+    height: 10%;
+    animation: spin 5s linear infinite;
+}
+
+#stjerne {
+    opacity: 0;
+}
+
+.background {
+    position: fixed;
+    left: -1px;
+    right: -1px;
+    top:0px;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 101%;
+    max-height: 101%;
+    width: auto;
+    height: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color:rgba(34, 34, 34, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.336);
+}
+
+@keyframes candycane {
+    from{
+        background-position: 50%;
+    }
+    to {
+        background-position: -100%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: transparent;
+    }
+    
+    50% {
+        color: rgb(0, 92, 15);
+    }
+
+    75% {
+        color: transparent;
+    }
+
+    100% {
+        color:red;
+    }
+}  
+
+@keyframes tore {
+    
+    0% {
+        transform:scale(10%);
+    }
+    
+    100% {
+        transform:scale(100%);
+    }
+}
+
+@keyframes spin{
+    from {
+        transform: rotate(0deg) translateY(300px);
+    }
+
+    to {
+        transform: rotate(360deg) translateY(300px);
+    }
+}
